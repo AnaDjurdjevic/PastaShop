@@ -10,8 +10,6 @@ namespace Pasta_Shop
 {
     public partial class PastaShopLogin : Form
     {
-        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["MySqlPastaShop"].ConnectionString;
-
         static PastaShopLogin obj;
         public static PastaShopLogin Instance
         {
@@ -84,11 +82,12 @@ namespace Pasta_Shop
             }
             account.Username = UsernamePlaceholder.Text;
             account.Password = PasswordPlaceholder.Text;
-            MySqlConnection conn = new MySqlConnection(connectionString);
+            MySqlConnection conn = null;
+            MySqlCommand cmd;
             try
             {
-                conn.Open();
-                MySqlCommand cmd = conn.CreateCommand();
+                conn = MySqlUtil.GetConnection();
+                cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "login";
                 cmd.Parameters.AddWithValue("@pUsername", account.Username);
@@ -127,7 +126,7 @@ namespace Pasta_Shop
             }
             finally
             {
-                conn.Close();
+                MySqlUtil.CloseQuietly(conn);
             }
 
         }

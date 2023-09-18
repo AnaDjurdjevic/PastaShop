@@ -36,6 +36,7 @@
             this.Panel = new System.Windows.Forms.Panel();
             this.articles1 = new Pasta_Shop.Articles();
             this.orders1 = new Pasta_Shop.orders1();
+            this.LogoutButton = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +80,7 @@
             // 
             // Panel
             // 
+            this.Panel.Controls.Add(this.LogoutButton);
             this.Panel.Controls.Add(this.OrdersButton);
             this.Panel.Controls.Add(this.ArticlesButton);
             this.Panel.Controls.Add(this.button4);
@@ -104,6 +106,16 @@
             this.orders1.Name = "orders1";
             this.orders1.Size = new System.Drawing.Size(694, 448);
             this.orders1.TabIndex = 0;
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.Location = new System.Drawing.Point(0, 409);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(106, 39);
+            this.LogoutButton.TabIndex = 7;
+            this.LogoutButton.Text = "LOGOUT";
+            this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // EmployeePage
             // 
@@ -132,5 +144,6 @@
         private System.Windows.Forms.Button button4;
         private Articles articles1;
         private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.Button LogoutButton;
     }
 }

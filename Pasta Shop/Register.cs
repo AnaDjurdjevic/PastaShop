@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,12 +15,13 @@ namespace Pasta_Shop
 {
     public partial class Register : Form
     {
-        Account account = new Account();
-        public static Register instance;
+        Individual Individual = new Individual();
+        Enterprise Enterprise = new Enterprise();
+        public static Register Instance;
         public Register()
         {
             InitializeComponent();
-            instance = this;
+            Instance = this;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace Pasta_Shop
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            bool success = false;
 
             //username
             if (string.IsNullOrEmpty(UsernamePlaceholder.Text.Trim()))
@@ -122,6 +125,15 @@ namespace Pasta_Shop
                 {
                     errorProvider8.SetError(EnterpriseNamePlaceholder, string.Empty);
                 }
+                Enterprise.Username = UsernamePlaceholder.Text;
+                Enterprise.Password = PasswordPlaceholder.Text;
+                Enterprise.Address = AddressPlaceholder.Text;
+                Enterprise.Telephone = TelephonePlaceholder.Text;
+                Enterprise.Location.PostNumber = PostNumberPlaceholder.Text;
+                Enterprise.Location.Name = LocationNamePlaceholder.Text;
+                Enterprise.JIB = JIBPlaceholder.Text;
+                Enterprise.Name = EnterpriseNamePlaceholder.Text;
+                success = Enterprise.Insert();
             }
             if (IndividualRadioButton.Checked)
             {
@@ -145,10 +157,17 @@ namespace Pasta_Shop
                 {
                     errorProvider10.SetError(LastNamePlaceholder, string.Empty);
                 }
+                Individual.Username = UsernamePlaceholder.Text;
+                Individual.Password = PasswordPlaceholder.Text;
+                Individual.Address = AddressPlaceholder.Text;
+                Individual.Telephone = TelephonePlaceholder.Text;
+                Individual.Location.PostNumber = PostNumberPlaceholder.Text;
+                Individual.Location.Name = LocationNamePlaceholder.Text;
+                Individual.FirstName = FirstNamePlaceholder.Text;
+                Individual.LastName = LastNamePlaceholder.Text;
+                success = Individual.Insert();
             }
-            account.Username = UsernamePlaceholder.Text;
-            account.Password = PasswordPlaceholder.Text;
-            bool success = account.Insert();
+            
             if (success)
             {
                 PastaShopLogin form = new PastaShopLogin();

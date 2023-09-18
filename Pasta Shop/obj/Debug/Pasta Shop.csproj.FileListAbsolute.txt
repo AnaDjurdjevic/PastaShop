@@ -46,3 +46,51 @@ C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta Sh
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta Shop\obj\Debug\Pasta_Shop.EmployeePage.resources
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta Shop\obj\Debug\Pasta_Shop.Articles.resources
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta Shop\obj\Debug\Pasta_Shop.orders1.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\Pasta Shop.exe.config
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\Pasta Shop.exe
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\Pasta Shop.pdb
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\Google.Protobuf.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\MySql.Data.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Buffers.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Memory.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\ZstdSharp.dll
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\Google.Protobuf.pdb
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\Google.Protobuf.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\MySql.Data.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Buffers.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Memory.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.csproj.SuggestedBindingRedirects.cache
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.Articles.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.EmployeePage.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.Order.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.orders1.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.PastaShopLogin.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.Properties.Resources.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.Register.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.csproj.GenerateResource.cache
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.exe
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.pdb

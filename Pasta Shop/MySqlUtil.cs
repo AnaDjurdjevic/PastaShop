@@ -10,7 +10,7 @@ namespace Pasta_Shop
 {
     internal class MySqlUtil
     {
-        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["MySqlHciPlanner"].ConnectionString;
+        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["MySqlPastaShop"].ConnectionString;
 
         public static MySqlConnection GetConnection()
         {

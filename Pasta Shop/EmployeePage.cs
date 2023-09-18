@@ -24,7 +24,7 @@ namespace Pasta_Shop
         {
             articles1.Hide();
             articles1.SendToBack();
-           orders1.Show();
+            orders1.Show();
             orders1.BringToFront();
 
         }
@@ -40,6 +40,13 @@ namespace Pasta_Shop
         private void articles1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            PastaShopLogin form = new PastaShopLogin();
+            form.Show();
+            this.Close();
         }
     }
 }

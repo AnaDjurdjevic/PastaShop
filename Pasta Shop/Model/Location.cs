@@ -8,7 +8,7 @@ namespace Pasta_Shop.Model
 {
     public class Location
     {
-        public int PostNumber { get; set; }
+        public String PostNumber { get; set; }
         public String Name { get; set; }
     }
 }

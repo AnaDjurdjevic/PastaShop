@@ -28,7 +28,7 @@ namespace Pasta_Shop.Model
                 conn = MySqlUtil.GetConnection();
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "add_customer";
+                cmd.CommandText = "add_account";
                 cmd.Parameters.AddWithValue("@pUsername", Username);
                 cmd.Parameters["@pUsername"].Direction = ParameterDirection.Input;
                 cmd.Parameters.AddWithValue("@pPassword", Password);
