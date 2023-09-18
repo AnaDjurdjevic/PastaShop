@@ -13,43 +13,14 @@ using System.Windows.Forms;
 namespace Pasta_Shop.Model
 {
     
-    public class Account
+    public abstract class Account
     {
         private static readonly string connectionString = ConfigurationManager.ConnectionStrings["MySqlPastaShop"].ConnectionString;
 
         public string Username { get;set; }
         public string Password { get;set; }
-        public virtual bool Insert()
-        {
-            MySqlConnection conn = null;
-            MySqlCommand cmd;
-            try
-            {
-                conn = MySqlUtil.GetConnection();
-                cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "add_account";
-                cmd.Parameters.AddWithValue("@pUsername", Username);
-                cmd.Parameters["@pUsername"].Direction = ParameterDirection.Input;
-                cmd.Parameters.AddWithValue("@pPassword", Password);
-                cmd.Parameters["@pPassword"].Direction = ParameterDirection.Input;
-                cmd.Parameters.Add("@pStatus", MySqlDbType.Int32);
-                cmd.Parameters["@pStatus"].Direction = ParameterDirection.Output;
-                cmd.ExecuteNonQuery();
-                int success = Convert.ToInt32(cmd.Parameters["@pStatus"].Value);
-                if (success == 1)
-                    return true;
-            }
-            catch (MySqlException ex)
-            {
-                Trace.WriteLine(ex.Message + ex.StackTrace);
-            }
-            finally
-            {
-                MySqlUtil.CloseQuietly(conn);
-            }
-            return false;
-        }
+        public abstract bool Insert();
+
         //public virtual bool Update(Account account);
         //public virtual bool Delete(Account account);
 

@@ -27,7 +27,7 @@ namespace Pasta_Shop
             InitializeComponent();
         }
 
-        Account account = new Account();
+        Individual account = new Individual();
 
         private void PastaShopLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
