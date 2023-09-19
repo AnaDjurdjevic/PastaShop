@@ -42,9 +42,9 @@
             // 
             // OrdersButton
             // 
-            this.OrdersButton.Location = new System.Drawing.Point(0, 0);
+            this.OrdersButton.Location = new System.Drawing.Point(0, 76);
             this.OrdersButton.Name = "OrdersButton";
-            this.OrdersButton.Size = new System.Drawing.Size(100, 80);
+            this.OrdersButton.Size = new System.Drawing.Size(102, 81);
             this.OrdersButton.TabIndex = 1;
             this.OrdersButton.Text = "ORDERS";
             this.OrdersButton.UseVisualStyleBackColor = true;
@@ -52,9 +52,9 @@
             // 
             // ArticlesButton
             // 
-            this.ArticlesButton.Location = new System.Drawing.Point(0, 78);
+            this.ArticlesButton.Location = new System.Drawing.Point(1, 0);
             this.ArticlesButton.Name = "ArticlesButton";
-            this.ArticlesButton.Size = new System.Drawing.Size(106, 81);
+            this.ArticlesButton.Size = new System.Drawing.Size(102, 81);
             this.ArticlesButton.TabIndex = 2;
             this.ArticlesButton.Text = "ARTICLES";
             this.ArticlesButton.UseVisualStyleBackColor = true;
@@ -64,7 +64,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(0, 153);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 81);
+            this.button3.Size = new System.Drawing.Size(102, 81);
             this.button3.TabIndex = 3;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@
             // 
             this.button4.Location = new System.Drawing.Point(0, 230);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 81);
+            this.button4.Size = new System.Drawing.Size(102, 81);
             this.button4.TabIndex = 4;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // 
             this.LogoutButton.Location = new System.Drawing.Point(0, 409);
             this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(106, 39);
+            this.LogoutButton.Size = new System.Drawing.Size(102, 39);
             this.LogoutButton.TabIndex = 7;
             this.LogoutButton.Text = "LOGOUT";
             this.LogoutButton.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@
             // articlesPage1
             // 
             this.articlesPage1.BackColor = System.Drawing.Color.PeachPuff;
-            this.articlesPage1.Location = new System.Drawing.Point(102, 2);
+            this.articlesPage1.Location = new System.Drawing.Point(103, 2);
             this.articlesPage1.Name = "articlesPage1";
-            this.articlesPage1.Size = new System.Drawing.Size(682, 448);
+            this.articlesPage1.Size = new System.Drawing.Size(681, 488);
             this.articlesPage1.TabIndex = 8;
             // 
             // EmployeePage

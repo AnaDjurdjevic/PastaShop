@@ -35,11 +35,7 @@ namespace Pasta_Shop
             ordersPage1.SendToBack();
             articlesPage1.Show();
             articlesPage1.BringToFront();
-        }
-
-        private void articles1_Load(object sender, EventArgs e)
-        {
-
+            articlesPage1.ShowTable();
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
