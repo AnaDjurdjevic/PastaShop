@@ -9,6 +9,7 @@ namespace Pasta_Shop.Model
     {
         public String FirstName { get; set; }
         public String LastName { get; set; }
+        
         public override bool Insert()
         {
             MySqlConnection conn = null;

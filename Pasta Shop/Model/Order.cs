@@ -9,7 +9,7 @@ namespace Pasta_Shop.Model
     internal class Order
     {
         public int ConfirmationNumber { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public string Status { get; set; }
         public Customer Customer { get; set; }
     }

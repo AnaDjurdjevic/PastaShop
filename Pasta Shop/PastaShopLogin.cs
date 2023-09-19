@@ -11,6 +11,7 @@ namespace Pasta_Shop
     public partial class PastaShopLogin : Form
     {
         static PastaShopLogin obj;
+
         public static PastaShopLogin Instance
         {
             get
@@ -82,6 +83,7 @@ namespace Pasta_Shop
             }
             account.Username = UsernamePlaceholder.Text;
             account.Password = PasswordPlaceholder.Text;
+            Account.User = account;
             MySqlConnection conn = null;
             MySqlCommand cmd;
             try

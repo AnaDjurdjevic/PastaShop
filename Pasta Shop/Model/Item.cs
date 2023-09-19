@@ -12,5 +12,10 @@ namespace Pasta_Shop.Model
         public double Price { get; set; }
         public Order Order { get; set; }
         public Pasta Pasta { get; set; }
+
+        public Item() 
+        {
+            Pasta = new Pasta();
+        }
     }
 }

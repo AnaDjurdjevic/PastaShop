@@ -34,20 +34,30 @@ namespace Pasta_Shop
 
         public void ShowTable()
         {
-            conn = MySqlUtil.GetConnection();
-            ds = new DataSet("dsArticles");
-            dt = new DataTable("dtArticles");
-            dt.Columns.Add("IdPasta", typeof(int));
-            dt.Columns.Add("Type", typeof(string));
-            dt.Columns.Add("Price", typeof(decimal));
-            dt.Columns.Add("Quantity", typeof(decimal));
-            ds.Tables.Add(dt);
-            adapter = new MySqlDataAdapter("SELECT * FROM `articles_view`", conn);
-            adapter.Fill(ds, "dtArticles");
-            dataGridView1.AutoGenerateColumns = true;
-            dataGridView1.DataSource = ds;
-            dataGridView1.DataMember = "dtArticles";
-            MySqlUtil.CloseQuietly(conn);
+            try
+            {
+                conn = MySqlUtil.GetConnection();
+                ds = new DataSet("dsArticles");
+                dt = new DataTable("dtArticles");
+                dt.Columns.Add("IdPasta", typeof(int));
+                dt.Columns.Add("Type", typeof(string));
+                dt.Columns.Add("Price", typeof(decimal));
+                dt.Columns.Add("Quantity", typeof(decimal));
+                ds.Tables.Add(dt);
+                adapter = new MySqlDataAdapter("SELECT * FROM `articles_view`", conn);
+                adapter.Fill(ds, "dtArticles");
+                dataGridView1.AutoGenerateColumns = true;
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "dtArticles";
+            }
+            catch (MySqlException ex)
+            {
+                Trace.WriteLine(ex.Message + ex.StackTrace);
+            }
+            finally
+            {
+                MySqlUtil.CloseQuietly(conn);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
