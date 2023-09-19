@@ -140,5 +140,10 @@ namespace Pasta_Shop
         {
 
         }
+
+        private void PastaShopLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Application.Exit();
+        }
     }
 }

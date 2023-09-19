@@ -184,6 +184,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PastaShop";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PastaShopLogin_FormClosed);
             this.Load += new System.EventHandler(this.PastaShop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

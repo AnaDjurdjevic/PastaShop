@@ -9,8 +9,6 @@ namespace Pasta_Shop.Model
     {
         public String FirstName { get; set; }
         public String LastName { get; set; }
-
-        private static readonly string INSERT = @"INSERT INTO `individual`(FirstName,LastName,CUSTOMER_ACCOUNT_Username) VALUES (@pFirstName, @pLastName,@pUsername)";
         public override bool Insert()
         {
             MySqlConnection conn = null;

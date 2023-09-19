@@ -1,6 +1,6 @@
 ﻿namespace Pasta_Shop
 {
-    partial class orders1
+    partial class OrdersPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -41,14 +41,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Orders
+            // OrdersPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.button1);
-            this.Name = "Orders";
+            this.Name = "OrdersPage";
             this.Size = new System.Drawing.Size(727, 433);
+            this.Load += new System.EventHandler(this.orders1_Load);
             this.ResumeLayout(false);
 
         }

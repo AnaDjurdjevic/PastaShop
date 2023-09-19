@@ -16,8 +16,6 @@ namespace Pasta_Shop.Model
     {
         public String JIB { get; set; }
         public String Name { get; set; }
-
-        private static readonly string INSERT = @"INSERT INTO `enterprise`(JIB,Name,CUSTOMER_ACCOUNT_Username) VALUES (@pJIB, @pName,@pUsername)";
         public override bool Insert()
         {
             MySqlConnection conn = null;

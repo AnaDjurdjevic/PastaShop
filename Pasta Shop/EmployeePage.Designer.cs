@@ -34,9 +34,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Panel = new System.Windows.Forms.Panel();
-            this.articles1 = new Pasta_Shop.Articles();
-            this.orders1 = new Pasta_Shop.orders1();
             this.LogoutButton = new System.Windows.Forms.Button();
+            this.ordersPage1 = new Pasta_Shop.OrdersPage();
+            this.articlesPage1 = new Pasta_Shop.ArticlesPage();
             this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             // 
             this.OrdersButton.Location = new System.Drawing.Point(0, 0);
             this.OrdersButton.Name = "OrdersButton";
-            this.OrdersButton.Size = new System.Drawing.Size(106, 81);
+            this.OrdersButton.Size = new System.Drawing.Size(100, 80);
             this.OrdersButton.TabIndex = 1;
             this.OrdersButton.Text = "ORDERS";
             this.OrdersButton.UseVisualStyleBackColor = true;
@@ -90,23 +90,6 @@
             this.Panel.Size = new System.Drawing.Size(106, 448);
             this.Panel.TabIndex = 6;
             // 
-            // articles1
-            // 
-            this.articles1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.articles1.Location = new System.Drawing.Point(106, 2);
-            this.articles1.Name = "articles1";
-            this.articles1.Size = new System.Drawing.Size(694, 448);
-            this.articles1.TabIndex = 5;
-            this.articles1.Load += new System.EventHandler(this.articles1_Load);
-            // 
-            // orders1
-            // 
-            this.orders1.BackColor = System.Drawing.Color.MistyRose;
-            this.orders1.Location = new System.Drawing.Point(106, 2);
-            this.orders1.Name = "orders1";
-            this.orders1.Size = new System.Drawing.Size(694, 448);
-            this.orders1.TabIndex = 0;
-            // 
             // LogoutButton
             // 
             this.LogoutButton.Location = new System.Drawing.Point(0, 409);
@@ -117,15 +100,31 @@
             this.LogoutButton.UseVisualStyleBackColor = true;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
+            // ordersPage1
+            // 
+            this.ordersPage1.BackColor = System.Drawing.Color.MistyRose;
+            this.ordersPage1.Location = new System.Drawing.Point(103, 2);
+            this.ordersPage1.Name = "ordersPage1";
+            this.ordersPage1.Size = new System.Drawing.Size(681, 448);
+            this.ordersPage1.TabIndex = 7;
+            // 
+            // articlesPage1
+            // 
+            this.articlesPage1.BackColor = System.Drawing.Color.PeachPuff;
+            this.articlesPage1.Location = new System.Drawing.Point(102, 2);
+            this.articlesPage1.Name = "articlesPage1";
+            this.articlesPage1.Size = new System.Drawing.Size(682, 448);
+            this.articlesPage1.TabIndex = 8;
+            // 
             // EmployeePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.articlesPage1);
+            this.Controls.Add(this.ordersPage1);
             this.Controls.Add(this.Panel);
-            this.Controls.Add(this.articles1);
-            this.Controls.Add(this.orders1);
             this.Name = "EmployeePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeePage";
@@ -137,13 +136,13 @@
         #endregion
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private orders1 orders1;
         private System.Windows.Forms.Button OrdersButton;
         private System.Windows.Forms.Button ArticlesButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private Articles articles1;
         private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button LogoutButton;
+        private OrdersPage ordersPage1;
+        private ArticlesPage articlesPage1;
     }
 }

@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Pasta_Shop
 {
-    public partial class orders1 : UserControl
+    public partial class OrdersPage : UserControl
     {
-        public static orders1 instance;
-        public orders1()
+        public static OrdersPage instance;
+        public OrdersPage()
         {
             InitializeComponent();
             instance = this;
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void orders1_Load(object sender, EventArgs e)
         {
 
         }

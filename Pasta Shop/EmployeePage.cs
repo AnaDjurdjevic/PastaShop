@@ -22,19 +22,19 @@ namespace Pasta_Shop
 
         private void OrdersButton_Click(object sender, EventArgs e)
         {
-            articles1.Hide();
-            articles1.SendToBack();
-            orders1.Show();
-            orders1.BringToFront();
+            articlesPage1.Hide();
+            articlesPage1.SendToBack();
+            ordersPage1.Show();
+            ordersPage1.BringToFront();
 
         }
 
         private void ArticlesButton_Click(object sender, EventArgs e)
         {
-            orders1.Hide();
-            orders1.SendToBack();
-            articles1.Show();
-            articles1.BringToFront();
+            ordersPage1.Hide();
+            ordersPage1.SendToBack();
+            articlesPage1.Show();
+            articlesPage1.BringToFront();
         }
 
         private void articles1_Load(object sender, EventArgs e)
