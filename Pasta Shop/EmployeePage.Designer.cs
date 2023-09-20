@@ -31,12 +31,10 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.OrdersButton = new System.Windows.Forms.Button();
             this.ArticlesButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.Panel = new System.Windows.Forms.Panel();
             this.LogoutButton = new System.Windows.Forms.Button();
-            this.ordersPage1 = new Pasta_Shop.OrdersPage();
             this.articlesPage1 = new Pasta_Shop.ArticlesPage();
+            this.ordersPage1 = new Pasta_Shop.OrdersPage();
             this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,31 +58,11 @@
             this.ArticlesButton.UseVisualStyleBackColor = true;
             this.ArticlesButton.Click += new System.EventHandler(this.ArticlesButton_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(0, 153);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 81);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 230);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 81);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // Panel
             // 
             this.Panel.Controls.Add(this.LogoutButton);
             this.Panel.Controls.Add(this.OrdersButton);
             this.Panel.Controls.Add(this.ArticlesButton);
-            this.Panel.Controls.Add(this.button4);
-            this.Panel.Controls.Add(this.button3);
             this.Panel.Location = new System.Drawing.Point(1, 2);
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(106, 448);
@@ -100,14 +78,6 @@
             this.LogoutButton.UseVisualStyleBackColor = true;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
-            // ordersPage1
-            // 
-            this.ordersPage1.BackColor = System.Drawing.Color.MistyRose;
-            this.ordersPage1.Location = new System.Drawing.Point(103, 2);
-            this.ordersPage1.Name = "ordersPage1";
-            this.ordersPage1.Size = new System.Drawing.Size(681, 448);
-            this.ordersPage1.TabIndex = 7;
-            // 
             // articlesPage1
             // 
             this.articlesPage1.BackColor = System.Drawing.Color.PeachPuff;
@@ -115,6 +85,14 @@
             this.articlesPage1.Name = "articlesPage1";
             this.articlesPage1.Size = new System.Drawing.Size(681, 488);
             this.articlesPage1.TabIndex = 8;
+            // 
+            // ordersPage1
+            // 
+            this.ordersPage1.BackColor = System.Drawing.Color.MistyRose;
+            this.ordersPage1.Location = new System.Drawing.Point(103, 2);
+            this.ordersPage1.Name = "ordersPage1";
+            this.ordersPage1.Size = new System.Drawing.Size(681, 448);
+            this.ordersPage1.TabIndex = 7;
             // 
             // EmployeePage
             // 
@@ -138,8 +116,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button OrdersButton;
         private System.Windows.Forms.Button ArticlesButton;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button LogoutButton;
         private OrdersPage ordersPage1;

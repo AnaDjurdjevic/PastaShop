@@ -100,6 +100,7 @@
             this.PasswordPlaceholder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.PasswordPlaceholder.Location = new System.Drawing.Point(221, 97);
             this.PasswordPlaceholder.Name = "PasswordPlaceholder";
+            this.PasswordPlaceholder.PasswordChar = '*';
             this.PasswordPlaceholder.Size = new System.Drawing.Size(184, 25);
             this.PasswordPlaceholder.TabIndex = 5;
             // 

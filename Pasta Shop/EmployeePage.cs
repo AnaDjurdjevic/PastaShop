@@ -26,6 +26,7 @@ namespace Pasta_Shop
             articlesPage1.SendToBack();
             ordersPage1.Show();
             ordersPage1.BringToFront();
+            ordersPage1.ShowOrders();
 
         }
 

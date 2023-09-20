@@ -131,7 +131,6 @@ namespace Pasta_Shop
                 orderDT.Rows.Add(Item.Pasta.IdPasta,Item.Pasta.Type,Item.Quantity,Item.Price);
                 dataGridViewOrder.AutoGenerateColumns = true;
                 dataGridViewOrder.DataSource = orderDT;
-                dataGridViewOrder.DataSource = orderDT;
                 dataGridViewOrder.Columns[0].Visible = false;
             }
             catch (MySqlException ex)
@@ -179,6 +178,9 @@ namespace Pasta_Shop
                     cmd.ExecuteNonQuery();
 
                 }
+                orderDT.Clear();
+                dataGridViewOrder.AutoGenerateColumns = true;
+                dataGridViewOrder.DataSource = orderDT;
                 MessageBox.Show("Successfully created order. Thank you!");
               
             }

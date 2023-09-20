@@ -110,6 +110,7 @@
             this.PasswordPlaceholder.ForeColor = System.Drawing.Color.Tomato;
             this.PasswordPlaceholder.Location = new System.Drawing.Point(569, 256);
             this.PasswordPlaceholder.Name = "PasswordPlaceholder";
+            this.PasswordPlaceholder.PasswordChar = '*';
             this.PasswordPlaceholder.Size = new System.Drawing.Size(184, 25);
             this.PasswordPlaceholder.TabIndex = 5;
             this.PasswordPlaceholder.TextChanged += new System.EventHandler(this.PasswordPlaceholder_TextChanged);
