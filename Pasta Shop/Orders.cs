@@ -104,7 +104,7 @@ namespace Pasta_Shop
                     dt1.Columns.Add("Price", typeof(decimal));
                     ds1.Tables.Add(dt1);
                     adapter1 = new MySqlDataAdapter(string.Format("select `p`.`Type`, " +
-                        "`i`.`Price`,`i`.`Quantity`,`o`.`CUSTOMER_ACCOUNT_Username` from `item` i" +
+                        "`i`.`Price`,`i`.`Quantity` from `item` i" +
                         " join `order` o on `i`.`ORDER_ConfirmationNumber` = `o`.`ConfirmationNumber` " +
                         "join `pasta` p on `p`.`IdPasta` = `i`.`PASTA_IdPasta` " +
                         "where `i`.`ORDER_ConfirmationNumber` = {0}", OrderNumber), conn);

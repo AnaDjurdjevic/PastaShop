@@ -44,27 +44,31 @@
             // 
             // dataGridViewOrders
             // 
+            this.dataGridViewOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewOrders.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrders.Location = new System.Drawing.Point(24, 13);
+            this.dataGridViewOrders.Location = new System.Drawing.Point(13, 13);
             this.dataGridViewOrders.Name = "dataGridViewOrders";
-            this.dataGridViewOrders.Size = new System.Drawing.Size(372, 206);
+            this.dataGridViewOrders.ReadOnly = true;
+            this.dataGridViewOrders.Size = new System.Drawing.Size(459, 206);
             this.dataGridViewOrders.TabIndex = 0;
             // 
             // dataGridViewSpecificOrder
             // 
+            this.dataGridViewSpecificOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSpecificOrder.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dataGridViewSpecificOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSpecificOrder.Location = new System.Drawing.Point(24, 225);
+            this.dataGridViewSpecificOrder.Location = new System.Drawing.Point(13, 225);
             this.dataGridViewSpecificOrder.Name = "dataGridViewSpecificOrder";
-            this.dataGridViewSpecificOrder.Size = new System.Drawing.Size(372, 194);
+            this.dataGridViewSpecificOrder.ReadOnly = true;
+            this.dataGridViewSpecificOrder.Size = new System.Drawing.Size(459, 194);
             this.dataGridViewSpecificOrder.TabIndex = 1;
             // 
             // ConfNumLabel
             // 
             this.ConfNumLabel.BackColor = System.Drawing.Color.MistyRose;
             this.ConfNumLabel.Font = new System.Drawing.Font("Swis721 BlkCn BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfNumLabel.Location = new System.Drawing.Point(445, 48);
+            this.ConfNumLabel.Location = new System.Drawing.Point(502, 48);
             this.ConfNumLabel.Name = "ConfNumLabel";
             this.ConfNumLabel.Size = new System.Drawing.Size(164, 51);
             this.ConfNumLabel.TabIndex = 4;
@@ -75,7 +79,7 @@
             // ConfNumPlaceholder
             // 
             this.ConfNumPlaceholder.BackColor = System.Drawing.Color.Gainsboro;
-            this.ConfNumPlaceholder.Location = new System.Drawing.Point(463, 102);
+            this.ConfNumPlaceholder.Location = new System.Drawing.Point(517, 102);
             this.ConfNumPlaceholder.Name = "ConfNumPlaceholder";
             this.ConfNumPlaceholder.Size = new System.Drawing.Size(137, 20);
             this.ConfNumPlaceholder.TabIndex = 10;
@@ -83,7 +87,7 @@
             // 
             // SeeOrderButton
             // 
-            this.SeeOrderButton.Location = new System.Drawing.Point(488, 128);
+            this.SeeOrderButton.Location = new System.Drawing.Point(545, 128);
             this.SeeOrderButton.Name = "SeeOrderButton";
             this.SeeOrderButton.Size = new System.Drawing.Size(91, 36);
             this.SeeOrderButton.TabIndex = 15;
@@ -95,7 +99,7 @@
             // 
             this.ChangeStatusLabel.BackColor = System.Drawing.Color.MistyRose;
             this.ChangeStatusLabel.Font = new System.Drawing.Font("Swis721 BlkCn BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangeStatusLabel.Location = new System.Drawing.Point(445, 221);
+            this.ChangeStatusLabel.Location = new System.Drawing.Point(502, 221);
             this.ChangeStatusLabel.Name = "ChangeStatusLabel";
             this.ChangeStatusLabel.Size = new System.Drawing.Size(164, 51);
             this.ChangeStatusLabel.TabIndex = 16;
@@ -105,7 +109,7 @@
             // 
             // ChangeStatusButton
             // 
-            this.ChangeStatusButton.Location = new System.Drawing.Point(488, 275);
+            this.ChangeStatusButton.Location = new System.Drawing.Point(545, 275);
             this.ChangeStatusButton.Name = "ChangeStatusButton";
             this.ChangeStatusButton.Size = new System.Drawing.Size(91, 36);
             this.ChangeStatusButton.TabIndex = 17;
