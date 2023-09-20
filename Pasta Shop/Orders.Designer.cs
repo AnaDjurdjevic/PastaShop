@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridViewOrders = new System.Windows.Forms.DataGridView();
             this.dataGridViewSpecificOrder = new System.Windows.Forms.DataGridView();
             this.ConfNumLabel = new System.Windows.Forms.Label();
@@ -35,13 +36,15 @@
             this.SeeOrderButton = new System.Windows.Forms.Button();
             this.ChangeStatusLabel = new System.Windows.Forms.Label();
             this.ChangeStatusButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpecificOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewOrders
             // 
-            this.dataGridViewOrders.BackgroundColor = System.Drawing.Color.PeachPuff;
+            this.dataGridViewOrders.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Location = new System.Drawing.Point(24, 13);
             this.dataGridViewOrders.Name = "dataGridViewOrders";
@@ -50,7 +53,7 @@
             // 
             // dataGridViewSpecificOrder
             // 
-            this.dataGridViewSpecificOrder.BackgroundColor = System.Drawing.Color.PeachPuff;
+            this.dataGridViewSpecificOrder.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dataGridViewSpecificOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSpecificOrder.Location = new System.Drawing.Point(24, 225);
             this.dataGridViewSpecificOrder.Name = "dataGridViewSpecificOrder";
@@ -59,7 +62,7 @@
             // 
             // ConfNumLabel
             // 
-            this.ConfNumLabel.BackColor = System.Drawing.Color.PeachPuff;
+            this.ConfNumLabel.BackColor = System.Drawing.Color.MistyRose;
             this.ConfNumLabel.Font = new System.Drawing.Font("Swis721 BlkCn BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfNumLabel.Location = new System.Drawing.Point(445, 48);
             this.ConfNumLabel.Name = "ConfNumLabel";
@@ -90,7 +93,7 @@
             // 
             // ChangeStatusLabel
             // 
-            this.ChangeStatusLabel.BackColor = System.Drawing.Color.PeachPuff;
+            this.ChangeStatusLabel.BackColor = System.Drawing.Color.MistyRose;
             this.ChangeStatusLabel.Font = new System.Drawing.Font("Swis721 BlkCn BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangeStatusLabel.Location = new System.Drawing.Point(445, 221);
             this.ChangeStatusLabel.Name = "ChangeStatusLabel";
@@ -110,11 +113,15 @@
             this.ChangeStatusButton.UseVisualStyleBackColor = true;
             this.ChangeStatusButton.Click += new System.EventHandler(this.ChangeStatusButton_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // OrdersPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.ChangeStatusButton);
             this.Controls.Add(this.ChangeStatusLabel);
             this.Controls.Add(this.SeeOrderButton);
@@ -127,6 +134,7 @@
             this.Load += new System.EventHandler(this.orders1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpecificOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +149,6 @@
         private System.Windows.Forms.Button SeeOrderButton;
         private System.Windows.Forms.Label ChangeStatusLabel;
         private System.Windows.Forms.Button ChangeStatusButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

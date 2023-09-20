@@ -205,7 +205,7 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // Order
+            // OrderPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,7 +224,7 @@
             this.Controls.Add(this.OrderLabel1);
             this.Controls.Add(this.OrderTitle);
             this.Controls.Add(this.LogoutButton);
-            this.Name = "Order";
+            this.Name = "OrderPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();

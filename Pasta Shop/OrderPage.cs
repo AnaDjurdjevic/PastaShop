@@ -117,6 +117,7 @@ namespace Pasta_Shop
             Item.Quantity = Convert.ToDouble(QuantityPlaceholder.Text);
             try
             {
+                bool rowExistsWithID = false;
                 conn = MySqlUtil.GetConnection();
                 cmd = conn.CreateCommand();
                 cmd.CommandText = "select Price, Type,IdPasta from pasta p where p.IdPasta = @Id";
@@ -125,10 +126,25 @@ namespace Pasta_Shop
                 while (reader.Read())
                 {
                     Item.Price = Item.Quantity * reader.GetDouble(0);
-                    Item.Pasta.Type= reader.GetString(1);
+                    Item.Pasta.Type = reader.GetString(1);
                     Item.Pasta.IdPasta = reader.GetInt32(2);
                 }
-                orderDT.Rows.Add(Item.Pasta.IdPasta,Item.Pasta.Type,Item.Quantity,Item.Price);
+                foreach (DataRow row in orderDT.Rows)
+                {
+                    int ExistingId = Convert.ToInt32(row[0]);
+                    if (ExistingId == Item.Pasta.IdPasta)
+                    {
+                        row[2] = Convert.ToDouble(row[2]) + Item.Quantity;
+                        row[3] = Convert.ToDouble(row[3]) + Item.Price;
+                        rowExistsWithID = true;
+                        dataGridViewOrder.DataSource = orderDT;
+                        break;
+                    }
+                }
+                if (!rowExistsWithID)
+                {
+                    orderDT.Rows.Add(Item.Pasta.IdPasta, Item.Pasta.Type, Item.Quantity, Item.Price);
+                }
                 dataGridViewOrder.AutoGenerateColumns = true;
                 dataGridViewOrder.DataSource = orderDT;
                 dataGridViewOrder.Columns[0].Visible = false;

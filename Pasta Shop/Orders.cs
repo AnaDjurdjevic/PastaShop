@@ -74,36 +74,59 @@ namespace Pasta_Shop
 
         private void SeeOrderButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(ConfNumPlaceholder.Text.Trim()))
+            {
+                errorProvider1.SetError(ConfNumPlaceholder, "This field is required.");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(ConfNumPlaceholder, string.Empty);
+            }
+            bool rowExists = false;
             int OrderNumber = Convert.ToInt32(ConfNumPlaceholder.Text);
-            try
+            foreach (DataRow row in dt.Rows)
             {
-                conn = MySqlUtil.GetConnection();
-                ds1 = new DataSet("dsSpecOrder");
-                dt1 = new DataTable("dsSpecOrder");
-                dt1.Columns.Add("Type", typeof(string));
-                dt1.Columns.Add("Quantity", typeof(decimal));
-                dt1.Columns.Add("Price", typeof(decimal));
-                ds1.Tables.Add(dt1);
-                adapter1 = new MySqlDataAdapter(string.Format("select `p`.`Type`, " +
-                    "`i`.`Price`,`i`.`Quantity`,`o`.`CUSTOMER_ACCOUNT_Username` from `item` i" +
-                    " join `order` o on `i`.`ORDER_ConfirmationNumber` = `o`.`ConfirmationNumber` " +
-                    "join `pasta` p on `p`.`IdPasta` = `i`.`PASTA_IdPasta` " +
-                    "where `i`.`ORDER_ConfirmationNumber` = {0}", OrderNumber), conn);
-                adapter1.Fill(ds1, "dsSpecOrder");
-                dataGridViewSpecificOrder.AutoGenerateColumns = true;
-                dataGridViewSpecificOrder.DataSource = ds1;
-                dataGridViewSpecificOrder.DataMember = "dsSpecOrder";
+                if(OrderNumber == Convert.ToInt32(row[0]))
+                {
+                    rowExists = true;
+                }
             }
-            catch (MySqlException ex)
+            if (rowExists)
             {
-                MessageBox.Show("Could not find the order with the entered  confirmation number");
-                Trace.WriteLine(ex.Message + ex.StackTrace);
+                try
+                {
+                    conn = MySqlUtil.GetConnection();
+                    ds1 = new DataSet("dsSpecOrder");
+                    dt1 = new DataTable("dsSpecOrder");
+                    dt1.Columns.Add("Type", typeof(string));
+                    dt1.Columns.Add("Quantity", typeof(decimal));
+                    dt1.Columns.Add("Price", typeof(decimal));
+                    ds1.Tables.Add(dt1);
+                    adapter1 = new MySqlDataAdapter(string.Format("select `p`.`Type`, " +
+                        "`i`.`Price`,`i`.`Quantity`,`o`.`CUSTOMER_ACCOUNT_Username` from `item` i" +
+                        " join `order` o on `i`.`ORDER_ConfirmationNumber` = `o`.`ConfirmationNumber` " +
+                        "join `pasta` p on `p`.`IdPasta` = `i`.`PASTA_IdPasta` " +
+                        "where `i`.`ORDER_ConfirmationNumber` = {0}", OrderNumber), conn);
+                    adapter1.Fill(ds1, "dsSpecOrder");
+                    dataGridViewSpecificOrder.AutoGenerateColumns = true;
+                    dataGridViewSpecificOrder.DataSource = ds1;
+                    dataGridViewSpecificOrder.DataMember = "dsSpecOrder";
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Could not find the order with the entered  confirmation number");
+                    Trace.WriteLine(ex.Message + ex.StackTrace);
+                }
+                finally
+                {
+                    MySqlUtil.CloseQuietly(conn);
+                }
             }
-            finally
+            else
             {
-                MySqlUtil.CloseQuietly(conn);
+                MessageBox.Show("Invalid order confirmation number. Please try again.");
             }
-
         }
 
         private void ConfNumPlaceholder_TextChanged(object sender, EventArgs e)
@@ -118,6 +141,15 @@ namespace Pasta_Shop
 
         private void ChangeStatusButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(ConfNumPlaceholder.Text.Trim()))
+            {
+                errorProvider1.SetError(ConfNumPlaceholder, "This field is required.");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(ConfNumPlaceholder, string.Empty);
+            }
             int OrderNumber = Convert.ToInt32(ConfNumPlaceholder.Text);
             try
             {
