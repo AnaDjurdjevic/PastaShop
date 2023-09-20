@@ -109,7 +109,7 @@ namespace Pasta_Shop
                 adapter.InsertCommand.Parameters["@pPrice"].Direction = ParameterDirection.Input;
                 adapter.InsertCommand.Parameters.AddWithValue("@pQuantity", article.Quantity);
                 adapter.InsertCommand.Parameters["@pQuantity"].Direction = ParameterDirection.Input;
-                adapter.InsertCommand.Parameters.AddWithValue("@pEmployee", "Snjeza");
+                adapter.InsertCommand.Parameters.AddWithValue("@pEmployee", Account.User.Username);
                 adapter.InsertCommand.Parameters["@pEmployee"].Direction = ParameterDirection.Input;
                 adapter.InsertCommand.ExecuteNonQuery();
                 adapter.Update(dt);
