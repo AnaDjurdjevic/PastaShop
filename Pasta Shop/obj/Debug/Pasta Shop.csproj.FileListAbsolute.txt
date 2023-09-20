@@ -83,7 +83,6 @@ C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Da
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.csproj.AssemblyReference.cache
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.csproj.SuggestedBindingRedirects.cache
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.EmployeePage.resources
-C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.Order.resources
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.PastaShopLogin.resources
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.Properties.Resources.resources
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.Register.resources
@@ -94,3 +93,4 @@ C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Da
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta Shop.pdb
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.OrdersPage.resources
 C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.ArticlesPage.resources
+C:\Users\Korisnik\Desktop\VI semestar\Baze podataka\Projekat\Pasta Shop\Pasta_Database\Pasta Shop\obj\Debug\Pasta_Shop.OrderPage.resources

@@ -1,6 +1,6 @@
 ﻿namespace Pasta_Shop
 {
-    partial class Order
+    partial class OrderPage
     {
         /// <summary>
         /// Required designer variable.

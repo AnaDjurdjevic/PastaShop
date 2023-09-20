@@ -104,7 +104,7 @@ namespace Pasta_Shop
                 int success = Convert.ToInt32(cmd.Parameters["@pStatus"].Value);
                 if (success == 1 && Convert.ToInt32(cmd.Parameters["@pType"].Value) == 1)
                 {
-                    Order form = new Order();
+                    OrderPage form = new OrderPage();
                     form.Show();
                     this.Close();
                 }

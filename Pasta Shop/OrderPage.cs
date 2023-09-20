@@ -14,9 +14,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Pasta_Shop
 {
-    public partial class Order : Form
+    public partial class OrderPage : Form
     {
-        public static Order instance;
+        public static OrderPage instance;
 
         private DataSet ds;
         private DataTable dt;
@@ -24,9 +24,10 @@ namespace Pasta_Shop
         private MySqlConnection conn = null;
 
         DataTable orderDT = new DataTable();
+        Order Order = new Order();
 
         Item Item = new Item();
-        public Order()
+        public OrderPage()
         {
             InitializeComponent();
             instance = this;
@@ -70,6 +71,7 @@ namespace Pasta_Shop
                 dataGridViewMenu.AutoGenerateColumns = true;
                 dataGridViewMenu.DataSource = ds;
                 dataGridViewMenu.DataMember = "dtMenu";
+                orderDT.Columns.Add("IdPasta", typeof(int));
                 orderDT.Columns.Add("Type", typeof(string));
                 orderDT.Columns.Add("Quantity", typeof(decimal));
                 orderDT.Columns.Add("Price", typeof(decimal));
@@ -117,17 +119,20 @@ namespace Pasta_Shop
             {
                 conn = MySqlUtil.GetConnection();
                 cmd = conn.CreateCommand();
-                cmd.CommandText = "select Price, Type from pasta p where p.IdPasta = @Id";
+                cmd.CommandText = "select Price, Type,IdPasta from pasta p where p.IdPasta = @Id";
                 cmd.Parameters.AddWithValue("@Id", Item.Pasta.IdPasta);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     Item.Price = Item.Quantity * reader.GetDouble(0);
                     Item.Pasta.Type= reader.GetString(1);
+                    Item.Pasta.IdPasta = reader.GetInt32(2);
                 }
-                orderDT.Rows.Add(Item.Pasta.Type,Item.Quantity,Item.Price);
+                orderDT.Rows.Add(Item.Pasta.IdPasta,Item.Pasta.Type,Item.Quantity,Item.Price);
                 dataGridViewOrder.AutoGenerateColumns = true;
                 dataGridViewOrder.DataSource = orderDT;
+                dataGridViewOrder.DataSource = orderDT;
+                dataGridViewOrder.Columns[0].Visible = false;
             }
             catch (MySqlException ex)
             {
@@ -141,42 +146,51 @@ namespace Pasta_Shop
 
         private void OrderButton_Click(object sender, EventArgs e)
         {
-            //MySqlCommand cmd;
-            //try
-            //{
-            //    conn = MySqlUtil.GetConnection();
-            //    cmd = conn.CreateCommand();
-            //    cmd.CommandType = CommandType.StoredProcedure;
-            //    cmd.CommandText = "create_order";
-            //    cmd.Parameters.AddWithValue("@pPostNumber", Location.PostNumber);
-            //    cmd.Parameters["@pPostNumber"].Direction = ParameterDirection.Input;
-            //    cmd.Parameters.AddWithValue("@pLocationName", Location.Name);
-            //    cmd.Parameters["@pLocationName"].Direction = ParameterDirection.Input;
-            //    cmd.Parameters.AddWithValue("@pAddress", Address);
-            //    cmd.Parameters["@pAddress"].Direction = ParameterDirection.Input;
-            //    cmd.Parameters.AddWithValue("@pTelephone", Telephone);
-            //    cmd.Parameters["@pTelephone"].Direction = ParameterDirection.Input;
-            //    cmd.Parameters.AddWithValue("@pUsername", Username);
-            //    cmd.Parameters["@pUsername"].Direction = ParameterDirection.Input;
-            //    cmd.Parameters.AddWithValue("@pPassword", Password);
-            //    cmd.Parameters["@pPassword"].Direction = ParameterDirection.Input;
-            //    cmd.Parameters.AddWithValue("@pFirstName", FirstName);
-            //    cmd.Parameters["@pFirstName"].Direction = ParameterDirection.Input;
-            //    cmd.Parameters.AddWithValue("@pLastName", LastName);
-            //    cmd.Parameters["@pLastName"].Direction = ParameterDirection.Input;
-            //    cmd.ExecuteNonQuery();
-                
-            //        MessageBox.Show("Successfully created order. Thank you!");
-                
-            //}
-            //catch (MySqlException ex)
-            //{
-            //    Trace.WriteLine(ex.Message + ex.StackTrace);
-            //}
-            //finally
-            //{
-            //    MySqlUtil.CloseQuietly(conn);
-            //}
+            MySqlCommand cmd;
+            Order.Date = DateTime.Now;
+            try
+            {
+                conn = MySqlUtil.GetConnection();
+                cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "create_order";
+                cmd.Parameters.AddWithValue("@pDate", Order.Date);
+                cmd.Parameters["@pDate"].Direction = ParameterDirection.Input;
+                cmd.Parameters.AddWithValue("@pStatus", "Created");
+                cmd.Parameters["@pStatus"].Direction = ParameterDirection.Input;
+                cmd.Parameters.AddWithValue("@pCustomer", Account.User.Username);
+                cmd.Parameters["@pCustomer"].Direction = ParameterDirection.Input;
+                cmd.Parameters.AddWithValue("@pId", MySqlDbType.Int32);
+                cmd.Parameters["@pId"].Direction = ParameterDirection.Output;
+                cmd.ExecuteNonQuery();
+                int ConfirmationNumber = Convert.ToInt32(cmd.Parameters["@pId"].Value);
+                foreach (DataRow row in orderDT.Rows)
+                {
+                    cmd = conn.CreateCommand();
+                    cmd.CommandText = "insert into `item`(`ORDER_ConfirmationNumber`,`PASTA_IdPasta`,`Quantity`,`Price`)values (@pConfirmationNumber,@pIdPasta,@pQuantity,@pPrice);";
+                    cmd.Parameters.AddWithValue("@pConfirmationNumber", ConfirmationNumber);
+                    cmd.Parameters["@pConfirmationNumber"].Direction = ParameterDirection.Input;
+                    cmd.Parameters.AddWithValue("@pIdPasta", row[0]);
+                    cmd.Parameters["@pIdPasta"].Direction = ParameterDirection.Input;
+                    cmd.Parameters.AddWithValue("@pQuantity", row[2]);
+                    cmd.Parameters["@pQuantity"].Direction = ParameterDirection.Input;
+                    cmd.Parameters.AddWithValue("@pPrice", row[3]);
+                    cmd.Parameters["@pPrice"].Direction = ParameterDirection.Input;
+                    cmd.ExecuteNonQuery();
+
+                }
+                MessageBox.Show("Successfully created order. Thank you!");
+              
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Failed to create an order. Please try again.");
+                Trace.WriteLine(ex.Message + ex.StackTrace);
+            }
+            finally
+            {
+                MySqlUtil.CloseQuietly(conn);
+            }
         }
     }
 }
