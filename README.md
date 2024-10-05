@@ -9,8 +9,4 @@ using the Forward Engineer option in ERwin or MySQL Workbench, and then execute 
 ![image](https://github.com/user-attachments/assets/24335a25-e1e4-44f6-a01a-1961bf03ed71)
 ![image](https://github.com/user-attachments/assets/404a5e5a-4514-441d-95f6-4787f174ae22)
 ![image](https://github.com/user-attachments/assets/66ce426f-c817-4b24-9d7d-c42292ba94af)
-![image](https://github.com/user-attachments/assets/e3e0f142-a76b-48b4-9fef-9e46c89b1c57)
-![image](https://github.com/user-attachments/assets/ef00cd6b-ef31-4a4a-a133-2a41c719d34b)
-![image](https://github.com/user-attachments/assets/86666709-eef4-4f9e-a4f0-35100e6b2ff6)
-![image](https://github.com/user-attachments/assets/12493f48-dd27-4c50-8bcc-0eff7f9c6405)
-![image](https://github.com/user-attachments/assets/6f8f0333-90a7-4731-ad9a-05fd9d5825ea)
+
