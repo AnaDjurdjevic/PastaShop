@@ -1,5 +1,5 @@
 <h1>Pasta Shop</h1>
-<h4>REQUIREMENTS</h4>
+<h4>REQUIREMENTS</h4>    
 -Write a textual specification (1-2 A4 pages) of the information needs for the selected project.    
 -Design a conceptual database model for the selected system using ERwin or MySQL Workbench.    
 -Generate a DDL script for creating the schema of the relational database (target DBMS should be MySQL) that corresponds to the designed conceptual model,
